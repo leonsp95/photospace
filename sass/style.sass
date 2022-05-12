@@ -1,0 +1,257 @@
+@use 'variables'
+@use 'mixins'
+
+*
+    box-sizing: border-box
+    margin: 0
+    padding: 0
+    text-decoration: none
+    font-family: 'Radio Canada', sans-serif
+
+html
+    scroll-behavior: smooth
+
+body
+    background: variables.$bg-color
+    color: variables.$primary-color
+    cursor: default
+
+nav
+
+    width: 100%
+    background-color: variables.$bg-color
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+
+    & ul
+        @include mixins.flex-center
+        min-height: 50px
+        list-style: none
+
+    & li
+        & a
+            font-weight: 600
+            margin: 20px
+            color: white
+    & .social-media
+        display: flex
+        justify-content: flex-start
+        color: white
+        margin-right: 10px
+        & li
+            & a
+                padding: 0
+                margin: 10px
+                & img
+                    width: 2em
+                    height: 2em
+                    transition: .6s
+                    &:hover
+                        filter: grayscale(100%)
+    @include mixins.mobileSmall
+        justify-content: center
+        & ul
+            flex-wrap: wrap
+            margin: 10px
+
+.navLink
+    cursor: pointer
+    transition: 0.7s
+    &:hover
+        color: variables.$secondary-color
+
+.background
+    width: 100%
+    height: 100vh
+    background-position: center center
+    background-image: linear-gradient(transparent, black 105%), url("/imgs/background.jpg")
+    background-repeat: no-repeat
+    background-size: cover
+    position: relative
+    @include mixins.mobileSmall
+        height: 50vh
+
+.title
+    position: absolute
+    color: variables.$primary-color
+    letter-spacing: 2px
+    text-shadow: 3px 3px 5px black
+    @include mixins.flex-center
+    flex-direction: column
+    width: 100%
+    height: 400px
+    text-align: center
+    @include mixins.mobileSmall
+        height: 500px
+
+    & .mainText
+        font-size: 4.5em
+        margin: 15px
+        font-weight: 800
+        @include mixins.mobileMinimal
+            font-size: 4em
+
+    & .afterText
+        font-size: 1.5em
+        margin: 15px
+        font-weight: 600
+        @include mixins.mobileMinimal
+            font-size: 1em
+
+.container
+    max-width: 1170px
+    margin: auto
+    margin-bottom: 50px
+    flex-direction: column
+    @include mixins.flex-center
+
+.section
+    margin: 25px
+    text-align: center
+    padding: 25px
+    cursor: default
+    @include mixins.mobileBig
+        margin-top: 5px
+        padding-top: 10px
+//scroll up button
+
+#scroller
+    width: 48px
+    height: 48px
+    background-color: grey
+    border: 5px solid grey
+    border-radius: 50%
+    position: fixed
+    bottom: 50px
+    right: 50px
+    cursor: pointer
+    display: none
+    transition: 0.7s
+    background-image: url("/imgs/scrollBtn.svg")
+    background-repeat: no-repeat
+    background-size: cover
+    z-index: 1
+    &:hover
+        background-color: variables.$primary-color
+        border: 5px solid variables.$primary-color
+
+.gallery
+    @include mixins.flex-center
+    // max-width: 1170px
+    padding: 1.5rem 0
+    margin: 0 auto
+    flex-direction: row
+    flex-wrap: wrap
+    justify-content: space-between
+    padding: 0
+    //mobile
+    @include mixins.mobileBig
+        flex-direction: row
+        justify-content: center
+
+    &-card
+        width: 31%
+        height: 400px
+        margin-bottom: 4%
+        padding: 3%
+        @include mixins.flex-center
+        flex-direction: column
+        justify-content: space-between
+        box-shadow: inset 0 0 5px variables.$bg-color
+
+        @include mixins.mobileBig
+            width: 90%
+            margin-bottom: 6%
+
+        &-title
+            font-size: 2rem
+            font-weight: 600
+            margin-bottom: 1rem
+            text-shadow: 0px 0px 10px black
+            cursor: default
+
+        &-btn
+            padding: .6rem 2rem
+            border: 2px solid variables.$primary-color
+            color: variables.$primary-color
+            font-weight: 300
+            text-transform: uppercase
+            transition: background-color 1s
+            transition: color 1s
+            background-color: rgba(0, 0, 0, 0.3)
+
+            &:hover
+                background-color: variables.$primary-color
+                color: variables.$bg-color
+
+    #card-1
+        @include mixins.bg-img('animais.jpg')
+    #card-2
+        @include mixins.bg-img('arquitetura.jpg')
+    #card-3
+        @include mixins.bg-img('cozinha.jpg')
+    #card-4
+        @include mixins.bg-img('decoracao.jpg')
+    #card-5
+        @include mixins.bg-img('eventos.jpg')
+    #card-6
+        @include mixins.bg-img('esporte.jpg')
+    #card-7
+        @include mixins.bg-img('moda.jpg')
+    #card-8
+        @include mixins.bg-img('paisagem.jpg')
+    #card-9
+        @include mixins.bg-img('pessoas.jpg')
+
+.team
+    width: 100%
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-around
+    flex: 1 1 300px
+    .team-card
+        height: 400px
+        width: 250px
+        text-align: center
+        display: flex
+        margin: 20px
+        flex-direction: column
+        justify-content: space-evenly
+        align-items: center
+        .team-pic
+            height: 250px
+            width: 250px
+            border-radius: 50%
+
+        #team1
+            @include mixins.team-img('team_001.jpg')
+        #team2
+            @include mixins.team-img('team_002.jpg')
+        #team3
+            @include mixins.team-img('team_003.jpg')
+
+.contact
+    width: 90%
+    display: flex
+    justify-content: center
+
+.form
+    margin: 5px
+    display: flex
+    flex-direction: column
+    flex: 1 1 300px
+    min-width: 300px
+    max-width: 500px
+    *
+        margin: .5em
+        padding: .5em
+        font-size: 1em
+
+.footer
+    p
+        margin: .5em
+    @include mixins.flex-center
+    text-align: center
+    color: variables.$primary-color
+    background-color: rgba(68, 68, 68, 0.445)

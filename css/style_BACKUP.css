@@ -1,0 +1,288 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    font-family: 'Radio Canada', sans-serif;
+    color:white;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: black;
+}
+
+nav {
+    width: 100%;
+    background-color: black;
+}
+
+nav ul {
+    display: flex;
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+
+}
+
+nav ul li a {    
+    font-weight: 600;
+    margin: 20px;   
+}
+
+.navLink {
+    cursor: pointer;
+    transition: 0.7s;
+}
+
+.navLink:hover {
+    color: #A0C55F;
+}
+.background {
+    width: 100%;
+    height: 900px;
+    background-image: linear-gradient(transparent, black 95%), url("/imgs/background.jpg");
+    background-repeat: no-repeat;
+    background-size:cover;
+    position: relative;
+    margin-bottom: 50px;
+}
+
+.title {
+    position: absolute;
+    color: white;
+    letter-spacing: 2px;
+    text-shadow: 3px 3px 5px black;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 700px;
+    justify-content: center;
+    align-items: center;
+}
+
+.title .mainText {
+    font-size: 75px;
+    margin: 15px;
+    font-weight: 800;
+}
+
+.title .afterText {
+    font-size: 25px;
+    margin: 15px;
+    font-weight: 600;
+
+}
+/* A0C55F */
+.container {
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;    
+}
+
+.container h2 {
+    margin: 25px;
+    text-align: center;
+    padding: 25px;
+
+}
+
+
+footer {
+    height: 50px;
+    color: white;
+    background-color: rgba(99, 99, 99, 0.445);
+    text-align: center;
+}
+
+#scroller {
+    width: 48px;
+    height: 48px;
+    background-color: grey;
+    border: 5px solid grey;
+    border-radius: 50%;
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    cursor: pointer;
+    display: none;
+    transition: 0.7s;
+    background-image: url("/imgs/scrollBtn.svg");
+    background-repeat: no-repeat;
+    background-size:cover;
+
+}
+
+#scroller:hover {
+    background-color: white;
+    border: 5px solid white;
+}
+
+#gallery {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 1170px;
+    padding: 1.5rem 0;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0;
+  }
+
+  .gallery-card {
+    width: 31%;
+    height: 400px;
+    margin-bottom: 4%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: #FFF;
+  }
+
+  .gallery-card-title {
+    font-size: 2rem;
+    font-weight: 300;
+    margin-bottom: 1rem;
+  }
+  .gallery-card-btn {
+    padding: 0.6rem 2rem;
+    border: 2px solid #FFF;
+    color: #FFF;
+    font-weight: 300;
+    text-transform: uppercase;
+    transition: background-color 1s;
+    transition: color 1s;
+  }
+  .gallery-card-btn:hover {
+    background-color: #FFF;
+    color: #000;
+  }
+  #gallery #card-1 {
+    background-image: url("/imgs/animais.jpg");
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: grayscale(100%);
+    transition: 0.6s;
+  }
+  #gallery #card-1:hover {
+    background-size: 110%;
+    filter: grayscale(0%);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/imgs/animais.jpg");
+  }
+  #gallery #card-2 {
+    background-image: url("/imgs/arquitetura.jpg");
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: grayscale(100%);
+    transition: 0.6s;
+  }
+  #gallery #card-2:hover {
+    background-size: 110%;
+    filter: grayscale(0%);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/imgs/arquitetura.jpg");
+  }
+  #gallery #card-3 {
+    background-image: url("/imgs/cidade.jpg");
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: grayscale(100%);
+    transition: 0.6s;
+  }
+  #gallery #card-3:hover {
+    background-size: 110%;
+    filter: grayscale(0%);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/imgs/cidade.jpg");
+  }
+  #gallery #card-4 {
+    background-image: url("/imgs/decoracao.jpg");
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: grayscale(100%);
+    transition: 0.6s;
+  }
+  #gallery #card-4:hover {
+    background-size: 110%;
+    filter: grayscale(0%);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/imgs/decoracao.jpg");
+  }
+  #gallery #card-5 {
+    background-image: url("/imgs/esportes.jpg");
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: grayscale(100%);
+    transition: 0.6s;
+  }
+  #gallery #card-5:hover {
+    background-size: 110%;
+    filter: grayscale(0%);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/imgs/esportes.jpg");
+  }
+  #gallery #card-6 {
+    background-image: url("/imgs/natureza.jpg");
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: grayscale(100%);
+    transition: 0.6s;
+  }
+  #gallery #card-6:hover {
+    background-size: 110%;
+    filter: grayscale(0%);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/imgs/natureza.jpg");
+  }
+  #gallery #card-7 {
+    background-image: url("/imgs/paisagem.jpg");
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: grayscale(100%);
+    transition: 0.6s;
+  }
+  #gallery #card-7:hover {
+    background-size: 110%;
+    filter: grayscale(0%);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/imgs/paisagem.jpg");
+  }
+  #gallery #card-8 {
+    background-image: url("/imgs/pessoas.jpg");
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: grayscale(100%);
+    transition: 0.6s;
+  }
+  #gallery #card-8:hover {
+    background-size: 110%;
+    filter: grayscale(0%);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/imgs/pessoas.jpg");
+  }
+  #gallery #card-9 {
+    background-image: url("/imgs/refeicoes.jpg");
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: grayscale(100%);
+    transition: 0.6s;
+  }
+  #gallery #card-9:hover {
+    background-size: 110%;
+    filter: grayscale(0%);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/imgs/refeicoes.jpg");
+  }
+
+  #contato {
+      height: 600px;
+      background-color: red;
+  }

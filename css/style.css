@@ -1,0 +1,429 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  font-family: "Radio Canada", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #000;
+  color: #FFF;
+  cursor: default;
+}
+
+nav {
+  width: 100%;
+  background-color: #000;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+nav ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 50px;
+  list-style: none;
+}
+nav li a {
+  font-weight: 600;
+  margin: 20px;
+  color: white;
+}
+nav .social-media {
+  display: flex;
+  justify-content: flex-start;
+  color: white;
+  margin-right: 10px;
+}
+nav .social-media li a {
+  padding: 0;
+  margin: 10px;
+}
+nav .social-media li a img {
+  width: 2em;
+  height: 2em;
+  transition: 0.6s;
+}
+nav .social-media li a img:hover {
+  filter: grayscale(100%);
+}
+@media (max-width: 600px) {
+  nav {
+    justify-content: center;
+  }
+  nav ul {
+    flex-wrap: wrap;
+    margin: 10px;
+  }
+}
+
+.navLink {
+  cursor: pointer;
+  transition: 0.7s;
+}
+.navLink:hover {
+  color: #A0C55F;
+}
+
+.background {
+  width: 100%;
+  height: 100vh;
+  background-position: center center;
+  background-image: linear-gradient(transparent, black 105%), url("/imgs/background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+@media (max-width: 600px) {
+  .background {
+    height: 50vh;
+  }
+}
+
+.title {
+  position: absolute;
+  color: #FFF;
+  letter-spacing: 2px;
+  text-shadow: 3px 3px 5px black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  height: 400px;
+  text-align: center;
+}
+@media (max-width: 600px) {
+  .title {
+    height: 500px;
+  }
+}
+.title .mainText {
+  font-size: 4.5em;
+  margin: 15px;
+  font-weight: 800;
+}
+@media (max-width: 450px) {
+  .title .mainText {
+    font-size: 4em;
+  }
+}
+.title .afterText {
+  font-size: 1.5em;
+  margin: 15px;
+  font-weight: 600;
+}
+@media (max-width: 450px) {
+  .title .afterText {
+    font-size: 1em;
+  }
+}
+
+.container {
+  max-width: 1170px;
+  margin: auto;
+  margin-bottom: 50px;
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.section {
+  margin: 25px;
+  text-align: center;
+  padding: 25px;
+  cursor: default;
+}
+@media (max-width: 1250px) {
+  .section {
+    margin-top: 5px;
+    padding-top: 10px;
+  }
+}
+
+#scroller {
+  width: 48px;
+  height: 48px;
+  background-color: grey;
+  border: 5px solid grey;
+  border-radius: 50%;
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  cursor: pointer;
+  display: none;
+  transition: 0.7s;
+  background-image: url("/imgs/scrollBtn.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 1;
+}
+#scroller:hover {
+  background-color: #FFF;
+  border: 5px solid #FFF;
+}
+
+.gallery {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem 0;
+  margin: 0 auto;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 0;
+}
+@media (max-width: 1250px) {
+  .gallery {
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+.gallery-card {
+  width: 31%;
+  height: 400px;
+  margin-bottom: 4%;
+  padding: 3%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: inset 0 0 5px #000;
+}
+@media (max-width: 1250px) {
+  .gallery-card {
+    width: 90%;
+    margin-bottom: 6%;
+  }
+}
+.gallery-card-title {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  text-shadow: 0px 0px 10px black;
+  cursor: default;
+}
+.gallery-card-btn {
+  padding: 0.6rem 2rem;
+  border: 2px solid #FFF;
+  color: #FFF;
+  font-weight: 300;
+  text-transform: uppercase;
+  transition: background-color 1s;
+  transition: color 1s;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+.gallery-card-btn:hover {
+  background-color: #FFF;
+  color: #000;
+}
+.gallery #card-1 {
+  background-image: url("../imgs/gallery/animais.jpg");
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: 0.6s;
+}
+.gallery #card-1:hover {
+  background-size: 110%;
+  filter: grayscale(0%);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../imgs/gallery/animais.jpg");
+}
+.gallery #card-2 {
+  background-image: url("../imgs/gallery/arquitetura.jpg");
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: 0.6s;
+}
+.gallery #card-2:hover {
+  background-size: 110%;
+  filter: grayscale(0%);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../imgs/gallery/arquitetura.jpg");
+}
+.gallery #card-3 {
+  background-image: url("../imgs/gallery/cozinha.jpg");
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: 0.6s;
+}
+.gallery #card-3:hover {
+  background-size: 110%;
+  filter: grayscale(0%);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../imgs/gallery/cozinha.jpg");
+}
+.gallery #card-4 {
+  background-image: url("../imgs/gallery/decoracao.jpg");
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: 0.6s;
+}
+.gallery #card-4:hover {
+  background-size: 110%;
+  filter: grayscale(0%);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../imgs/gallery/decoracao.jpg");
+}
+.gallery #card-5 {
+  background-image: url("../imgs/gallery/eventos.jpg");
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: 0.6s;
+}
+.gallery #card-5:hover {
+  background-size: 110%;
+  filter: grayscale(0%);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../imgs/gallery/eventos.jpg");
+}
+.gallery #card-6 {
+  background-image: url("../imgs/gallery/esporte.jpg");
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: 0.6s;
+}
+.gallery #card-6:hover {
+  background-size: 110%;
+  filter: grayscale(0%);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../imgs/gallery/esporte.jpg");
+}
+.gallery #card-7 {
+  background-image: url("../imgs/gallery/moda.jpg");
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: 0.6s;
+}
+.gallery #card-7:hover {
+  background-size: 110%;
+  filter: grayscale(0%);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../imgs/gallery/moda.jpg");
+}
+.gallery #card-8 {
+  background-image: url("../imgs/gallery/paisagem.jpg");
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: 0.6s;
+}
+.gallery #card-8:hover {
+  background-size: 110%;
+  filter: grayscale(0%);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../imgs/gallery/paisagem.jpg");
+}
+.gallery #card-9 {
+  background-image: url("../imgs/gallery/pessoas.jpg");
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: 0.6s;
+}
+.gallery #card-9:hover {
+  background-size: 110%;
+  filter: grayscale(0%);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../imgs/gallery/pessoas.jpg");
+}
+
+.team {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  flex: 1 1 300px;
+}
+.team .team-card {
+  height: 400px;
+  width: 250px;
+  text-align: center;
+  display: flex;
+  margin: 20px;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.team .team-card .team-pic {
+  height: 250px;
+  width: 250px;
+  border-radius: 50%;
+}
+.team .team-card #team1 {
+  background-image: url("../imgs/team/team_001.jpg");
+  background-size: 100%;
+  background-position: cover;
+  background-repeat: no-repeat;
+  transition: 0.6s;
+}
+.team .team-card #team1:hover {
+  background-size: 110%;
+  filter: grayscale(100%);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../imgs/team/team_001.jpg");
+}
+.team .team-card #team2 {
+  background-image: url("../imgs/team/team_002.jpg");
+  background-size: 100%;
+  background-position: cover;
+  background-repeat: no-repeat;
+  transition: 0.6s;
+}
+.team .team-card #team2:hover {
+  background-size: 110%;
+  filter: grayscale(100%);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../imgs/team/team_002.jpg");
+}
+.team .team-card #team3 {
+  background-image: url("../imgs/team/team_003.jpg");
+  background-size: 100%;
+  background-position: cover;
+  background-repeat: no-repeat;
+  transition: 0.6s;
+}
+.team .team-card #team3:hover {
+  background-size: 110%;
+  filter: grayscale(100%);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../imgs/team/team_003.jpg");
+}
+
+.contact {
+  width: 90%;
+  display: flex;
+  justify-content: center;
+}
+
+.form {
+  margin: 5px;
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 300px;
+  min-width: 300px;
+  max-width: 500px;
+}
+.form * {
+  margin: 0.5em;
+  padding: 0.5em;
+  font-size: 1em;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #FFF;
+  background-color: rgba(68, 68, 68, 0.445);
+}
+.footer p {
+  margin: 0.5em;
+}
+
+/*# sourceMappingURL=style.css.map */

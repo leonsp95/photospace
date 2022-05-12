@@ -1,0 +1,135 @@
+<!-- sass --watch sass/style.sass:css/style.css -->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Photo Space</title>
+    <link href="/css/style.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Radio+Canada:wght@300&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a class="navLink" href="#homeSection">Home</a></li>
+            <li><a class="navLink" href="#gallerySection">Galeria</a></li>
+            <li><a class="navLink" href="#teamSection">A Equipe</a></li>
+            <li><a class="navLink" href="#contactSection">Contato</a></li>
+        </ul>
+        <ul class="social-media">
+            <li><a href="#"><img src="imgs/social-media/ig.svg" alt="Instagram"></a></li>
+            <li><a href="#"><img src="imgs/social-media/fb.svg" alt="Facebook"></a></li>
+            <li><a href="#"><img src="imgs/social-media/pin.svg" alt="Pinterest"></a></li>
+            <li><a href="#"><img src="imgs/social-media/tumblr.svg" alt="Tumblr"></a></li>
+        </ul>
+    </nav>
+    <main>
+        <div id="scroller"></div>
+        <div class="background" id="#homeSection">
+            <div class="title">
+                <h1 class="mainText">Photo Space</p>
+                    <h2 class="afterText">Uma boa foto vale mais que mil palavras</p>
+            </div>
+        </div>
+
+        <div class="container">
+            <h1 class="section" id="gallerySection">Galeria</h2>
+                <div class="gallery">
+
+                    <div class="gallery-card" id="card-1">
+                        <h2 class="gallery-card-title">Animais</h2>
+                        <a href="" class="gallery-card-btn"><b>Mais fotos</b></a>
+                    </div>
+                    <div class="gallery-card" id="card-2">
+                        <h2 class="gallery-card-title">Arquitetura</h2>
+                        <a href="" class="gallery-card-btn"><b>Mais fotos</b></a>
+                    </div>
+                    <div class="gallery-card" id="card-3">
+                        <h2 class="gallery-card-title">Cozinha</h2>
+                        <a href="" class="gallery-card-btn"><b>Mais fotos</b></a>
+                    </div>
+                    <div class="gallery-card" id="card-4">
+                        <h2 class="gallery-card-title">Decorações</h2>
+                        <a href="" class="gallery-card-btn"><b>Mais fotos</b></a>
+                    </div>
+                    <div class="gallery-card" id="card-5">
+                        <h2 class="gallery-card-title">Eventos</h2>
+                        <a href="" class="gallery-card-btn"><b>Mais fotos</b></a>
+                    </div>
+                    <div class="gallery-card" id="card-6">
+                        <h2 class="gallery-card-title">Esportes</h2>
+                        <a href="" class="gallery-card-btn"><b>Mais fotos</b></a>
+                    </div>
+                    <div class="gallery-card" id="card-7">
+                        <h2 class="gallery-card-title">Moda</h2>
+                        <a href="" class="gallery-card-btn"><b>Mais fotos</b></a>
+                    </div>
+                    <div class="gallery-card" id="card-8">
+                        <h2 class="gallery-card-title">Paisagens</h2>
+                        <a href="" class="gallery-card-btn"><b>Mais fotos</b></a>
+                    </div>
+                    <div class="gallery-card" id="card-9">
+                        <h2 class="gallery-card-title">Pessoas</h2>
+                        <a href="" class="gallery-card-btn"><b>Mais fotos</b></a>
+                    </div>
+
+                </div>
+        </div>
+        <div class="container">
+            <h1 class="section" id="teamSection">A Equipe</h1>
+
+            <div class="team">
+                <div class="team-card">
+                    <div class="team-pic" id="team1"></div>
+                    <div class="text">
+                        <p><b>Luana Giordano</b></p>Amante da fotografia desde pequena, leva sua máquina para todo
+                        canto
+                    </div>
+                </div>
+
+                <div class="team-card">
+                    <div class="team-pic" id="team2">
+                    </div>
+                    <div class="text">
+                        <p><b>Patrícia Vieira</p></b> Modelo e atriz, começou na fotografia após se apaixonar pela coisa
+                    </div>
+                </div>
+                <div class="team-card">
+                    <div class="team-pic" id="team3">
+                    </div>
+                    <div class="text">
+                        <p><b>Paulo Neves Jr.</b></p>Exímio editor de imagens, Paulo faz milagres
+                        quando bota a mão na massa
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <h1 class="section" id="contactSection">Contato</h1>
+            <div class="contact">
+                <form class="form">
+                    <input type="text" placeholder="Nome" required>
+                    <input type="email" placeholder="E-mail" required>
+                    <input type="text" placeholder="Telefone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                        required>
+                    <textarea rows="10" cols="30" placeholder="Mensagem" required></textarea>
+                    <input type="submit">
+                </form>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <p>© 2022 Photo Space — Todos os direitos reservados.</p>
+        </div>
+
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
